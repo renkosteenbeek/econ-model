@@ -17,6 +17,8 @@
     </PROPERTY>
     <PROPERTY ID="ProductName2" LABEL="Product Name" TYPE="String">
     </PROPERTY>
+    <PROPERTY ID="FairTradeMaterials" LABEL="FairTradeMaterials" TYPE="Boolean" VALUE="false">
+    </PROPERTY>
     <PROPERTY ID="ChairModel" LABEL="Chair Model" TYPE="String" MANDATORY="true">
       <OPTIONS>
         <OPTION ID="Standard" LABEL="Standard" />
