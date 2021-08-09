@@ -1,7 +1,7 @@
-# KSP website / portal
-Based on the WSH theme
+e-Con model git history demo
+======
+
+Demoproject to demonstrate using Git to maintain e-Con models.
 
 ## Info
-Go to confluence for more information:
-https://zigwebsoftware.atlassian.net/wiki/spaces/ZSUITE/pages/122765833/Nieuwe+klant+aanmaken+in+KSP
-
+Contact Renko Steenbeek at rsteenbeek@experlogix.com for further questions.
