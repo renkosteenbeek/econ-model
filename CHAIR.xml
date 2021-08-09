@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<CLASS ID="MY ITEM" LABEL="Item" TYPE="" VERSION="1.0.0" ISINTERFACE="false" XSLDATASOURCE="CHAIR" ENTITY="MY ITEM" ENTITYVERSION="1.0.0">
+  <PROPERTIES>
+    <PROPERTY ID="ProductName" LABEL="Product Name" TYPE="String" ININTERFACE="true">
+    </PROPERTY>
+    <PROPERTY ID="Price" LABEL="Price" TYPE="Double" ININTERFACE="true">
+    </PROPERTY>
+    <PROPERTY ID="NO" LABEL="No." TYPE="String" VALUE="false" VISIBLE="false" FIELDID="" DOMAIN="ChairNumberSeries" KEYVALUE="Chair">
+    </PROPERTY>
+    <PROPERTY ID="DESCRIPTION" LABEL="Description" TYPE="String" LENGTH="50" FIELDID="">
+    </PROPERTY>
+    <PROPERTY ID="BASEUNITOFMEASURE" LABEL="Base Unit of Measure" TYPE="String" LENGTH="10" VALUE="PCS" VISIBLE="false" FIELDID="">
+    </PROPERTY>
+    <PROPERTY ID="UNITPRICE" LABEL="Unit Price" TYPE="Double" FIELDID="">
+    </PROPERTY>
+    <PROPERTY ID="UNITCOST" LABEL="Unit Cost" TYPE="Double" FIELDID="">
+    </PROPERTY>
+    <PROPERTY ID="ProductName2" LABEL="Product Name" TYPE="String">
+    </PROPERTY>
+    <PROPERTY ID="ChairModel" LABEL="Chair Model" TYPE="String" MANDATORY="true">
+      <OPTIONS>
+        <OPTION ID="Standard" LABEL="Standard" />
+        <OPTION ID="Luxery" LABEL="Luxery" />
+        <OPTION ID="Ambassador" LABEL="Ambassador" />
+        <OPTION ID="Executive" LABEL="Executive" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="Height" LABEL="Height" TYPE="String" MANDATORY="true">
+      <OPTIONS>
+        <OPTION ID="800" LABEL="800 mm" />
+        <OPTION ID="850" LABEL="850 mm" />
+        <OPTION ID="900" LABEL="900 mm" />
+        <OPTION ID="1000" LABEL="1000 mm" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="Armrests" LABEL="Armrests required?" TYPE="Boolean" VALUE="false">
+    </PROPERTY>
+    <PROPERTY ID="Fabric" LABEL="Fabric" TYPE="String" MANDATORY="true">
+      <OPTIONS>
+        <OPTION ID="Polyester" LABEL="Polyester" />
+        <OPTION ID="Cotton" LABEL="Cotton" />
+        <OPTION ID="Velvet" LABEL="Velvet" />
+        <OPTION ID="Leather" LABEL="Leather" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="ColorFrame" LABEL="Color of the Frame" TYPE="String">
+      <OPTIONS>
+        <OPTION ID="Silver" LABEL="Silver" />
+        <OPTION ID="Gray" LABEL="Gray" />
+        <OPTION ID="Black" LABEL="Black" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="ColorSeat" LABEL="Color of the Seat" TYPE="String" DOMAIN="Color">
+      <OPTIONS>
+        <OPTION ID="Blue" LABEL="Blue" />
+        <OPTION ID="Red" LABEL="Red" />
+        <OPTION ID="Yellow" LABEL="Yellow" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="ColorBack" LABEL="Color of the Back" TYPE="String" DOMAIN="Color">
+      <OPTIONS>
+        <OPTION ID="Blue" LABEL="Blue" />
+        <OPTION ID="Red" LABEL="Red" />
+        <OPTION ID="Yellow" LABEL="Yellow" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="ColorArmrests" LABEL="Color of the Armrests" TYPE="String" DOMAIN="Color">
+      <OPTIONS>
+        <OPTION ID="Blue" LABEL="Blue" />
+        <OPTION ID="Red" LABEL="Red" />
+        <OPTION ID="Yellow" LABEL="Yellow" />
+      </OPTIONS>
+    </PROPERTY>
+  </PROPERTIES>
+  <REFERENCES>
+    <REFERENCE ID="Accessories" LABEL="Accessories" TYPE="String">
+      <CLASS ID="Class1" LABEL="Class1" TYPE="">
+        <PROPERTIES>
+          <PROPERTY ID="AdjustableBack" LABEL="Adjustable Back" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+          <PROPERTY ID="AdjustableSeat" LABEL="Adjustable Seat" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+          <PROPERTY ID="AdjustableArmrests" LABEL="Adjustable Armrests" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+          <PROPERTY ID="RollingWheels" LABEL="Rolling Wheels" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+          <PROPERTY ID="LegRests" LABEL="Leg Rests" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+          <PROPERTY ID="ExtraHighBack" LABEL="Extra High Back" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+          <PROPERTY ID="ExtraStrongQualityOfFabric" LABEL="Extra Strong Quality Of Fabric" TYPE="Boolean" VALUE="false">
+          </PROPERTY>
+        </PROPERTIES>
+      </CLASS>
+    </REFERENCE>
+    <REFERENCE ID="BOMHeader" LABEL="BOM Header" TYPE="String" VALUE="MY BOM HEADER" CONSTANT="true" FIELDID="Production BOM No." TABLEID="99000771">
+      <CLASS ID="MY BOM HEADER" LABEL="Production BOM Header" TYPE="" ENTITY="MY BOM HEADER" ENTITYVERSION="1.0.0" TABLEID="99000771">
+        <PROPERTIES>
+          <PROPERTY ID="NO" LABEL="No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+          </PROPERTY>
+          <PROPERTY ID="DESCRIPTION" LABEL="Description" TYPE="String" LENGTH="50" FIELDID="10">
+          </PROPERTY>
+          <PROPERTY ID="UNITOFMEASURECODE" LABEL="Unit of Measure Code" TYPE="String" LENGTH="10" VALUE="PCS" VISIBLE="false" FIELDID="21">
+          </PROPERTY>
+        </PROPERTIES>
+        <REFERENCES>
+          <REFERENCE ID="Frame" LABEL="Frame" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Wheel" LABEL="Wheel" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Fabric" LABEL="Fabric" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Back" LABEL="Back" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Seat" LABEL="Seat" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Foot" LABEL="Foot" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="LegRest" LABEL="Leg Rest" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="ArmRest" LABEL="ArmRest" TYPE="String" FIELDID="Production BOM Line" TABLEID="99000772">
+            <CLASS ID="MY BOM LINE" LABEL="Production BOM Line" TYPE="" ENTITY="MY BOM LINE" ENTITYVERSION="1.0.0" TABLEID="99000772">
+              <PROPERTIES>
+                <PROPERTY ID="PRODUCTIONBOMNO" LABEL="Production BOM No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="LINENO" LABEL="LineNo" TYPE="String" VISIBLE="false" FIELDID="2" STYLE="key:true;keyno:3" DOMAIN="LineNum">
+                </PROPERTY>
+                <PROPERTY ID="VERSIONCODE" LABEL="Version Code" TYPE="String" LENGTH="10" VISIBLE="false" FIELDID="3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="TYPE" LABEL="Type" TYPE="Long" VALUE="1" VISIBLE="false" FIELDID="10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                </PROPERTY>
+                <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+        </REFERENCES>
+      </CLASS>
+    </REFERENCE>
+  </REFERENCES>
+  <RULES LABEL="Rules" DESCRIPTION="">
+    <RULES LABEL="Wizard Rules" DESCRIPTION="" ISSYSTEM="true">
+      <RULES LABEL="DecisionMatrixWizard" DESCRIPTION="" ISSYSTEM="true">
+        <RULE LABEL="Armrests@Visible-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Armrests@Visible = ChairModel in {""; "Luxery"; "Ambassador"; "Executive"};
+</IMPLICATION>
+          <DESCRIPTION>Set the visible of Armrests - Use the value of ChairModel</DESCRIPTION>
+          <LHS>;armrests@visible;</LHS>
+        </RULE>
+        <RULE LABEL="Accessories@Visible-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Accessories@Visible = ChairModel in {""; "Luxery"; "Ambassador"; "Executive"};
+</IMPLICATION>
+          <DESCRIPTION>Set the visible of Accessories - Use the value of ChairModel</DESCRIPTION>
+          <LHS>;accessories@visible;</LHS>
+        </RULE>
+        <RULE LABEL="Accessories.ExtraStrongQualityOfFabric@Visible-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Accessories.ExtraStrongQualityOfFabric@Visible = Fabric in {""; "Polyester"; "Cotton"};
+</IMPLICATION>
+          <DESCRIPTION>Set the visible of Accessories.ExtraStrongQualityOfFabric - Use the value of Fabric</DESCRIPTION>
+          <LHS>;accessories.extrastrongqualityoffabric@visible;</LHS>
+        </RULE>
+        <RULE LABEL="ColorBack@Default-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>if ColorSeat in {"Blue"} then ColorBack@default = "Blue" end if;
+if ColorSeat in {"Red"} then ColorBack@default = "Red" end if;
+if ColorSeat in {"Yellow"} then ColorBack@default = "Yellow" end if;
+</IMPLICATION>
+          <DESCRIPTION>Set the default value of ColorBack - Use the value of ColorSeat</DESCRIPTION>
+          <LHS>;colorback@default;</LHS>
+        </RULE>
+        <RULE LABEL="Armrests@Default-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>if ChairModel in {"Ambassador"; "Executive"} then Armrests@default = true end if;
+</IMPLICATION>
+          <DESCRIPTION>Set the default value of Armrests - Use the value of ChairModel</DESCRIPTION>
+          <LHS>;armrests@default;</LHS>
+        </RULE>
+        <RULE LABEL="Fabric@Options-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Fabric@option("Polyester")@visible = ChairModel in {""; "Standard"; "Luxery"; "Ambassador"; "Executive"};
+Fabric@option("Cotton")@visible = ChairModel in {""; "Standard"; "Luxery"; "Ambassador"; "Executive"};
+Fabric@option("Velvet")@visible = ChairModel in {""; "Standard"; "Luxery"; "Ambassador"; "Executive"};
+Fabric@option("Leather")@visible = ChairModel in {"Executive"};
+</IMPLICATION>
+          <DESCRIPTION>Set the option visibility of Fabric - Use the value of ChairModel</DESCRIPTION>
+          <LHS>;fabric@options;</LHS>
+        </RULE>
+        <RULE LABEL="ColorArmrests@Visible-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>ColorArmrests@Visible = Armrests;
+</IMPLICATION>
+          <DESCRIPTION>Set the visible of ColorArmrests - Use the value of Armrests</DESCRIPTION>
+          <LHS>;colorarmrests@visible;</LHS>
+        </RULE>
+        <RULE LABEL="ColorBack@Options-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>ColorBack@option("Blue")@visible = ColorSeat in {""; "Blue"; "Red"; "Yellow"};
+ColorBack@option("Red")@visible = ColorSeat in {""; "Blue"; "Red"};
+ColorBack@option("Yellow")@visible = ColorSeat in {""; "Blue"; "Yellow"};
+</IMPLICATION>
+          <DESCRIPTION>Set the option visibility of ColorBack - Use the value of ColorSeat</DESCRIPTION>
+          <LHS>;colorback@options;</LHS>
+        </RULE>
+        <RULE LABEL="ColorArmrests@Options-DMW" ISSYSTEM="true">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>ColorArmrests@option("Blue")@visible = ColorBack in {""; "Blue"; "Red"; "Yellow"};
+ColorArmrests@option("Red")@visible = ColorBack in {""; "Blue"; "Red"};
+ColorArmrests@option("Yellow")@visible = ColorBack in {""; "Blue"; "Yellow"};
+</IMPLICATION>
+          <DESCRIPTION>Set the option visibility of ColorArmrests - Use the value of ColorBack</DESCRIPTION>
+          <LHS>;colorarmrests@options;</LHS>
+        </RULE>
+      </RULES>
+    </RULES>
+    <RULE LABEL="Adjustable armrests only visible with armrests required">
+      <CONDITION>true	</CONDITION>
+      <IMPLICATION>Accessories.AdjustableArmrests@visible = Armrests;</IMPLICATION>
+      <DESCRIPTION>Adjustable armrests only visible with armrests required</DESCRIPTION>
+      <LHS>;accessories.adjustablearmrests@visible;</LHS>
+    </RULE>
+    <RULE LABEL="Rolling wheels and leg rests are not allowed together" TYPE="validation">
+      <CONDITION>Accessories.RollingWheels == true and Accessories.LegRests == true	</CONDITION>
+      <IMPLICATION>"Rolling wheels and leg rests are not allowed together!"</IMPLICATION>
+      <DESCRIPTION>Rolling wheels and leg rests are not allowed together</DESCRIPTION>
+      <LHS>;</LHS>
+    </RULE>
+    <RULE LABEL="Height standard chair is 900 mm">
+      <CONDITION>ChairModel == "Standard"	</CONDITION>
+      <IMPLICATION>Height = "900";</IMPLICATION>
+      <DESCRIPTION>Height standard chair is 900 mm</DESCRIPTION>
+      <LHS>;height@value;</LHS>
+    </RULE>
+    <RULE LABEL="Only luxery chair can be 1000 mm height">
+      <CONDITION>true	</CONDITION>
+      <IMPLICATION>Height@option("1000")@visible = ChairModel == "Luxery";</IMPLICATION>
+      <DESCRIPTION>Only luxery chair can be 1000 mm height</DESCRIPTION>
+      <LHS>;height@options;</LHS>
+    </RULE>
+    <RULE LABEL="Define item name">
+      <CONDITION>true</CONDITION>
+      <IMPLICATION>DESCRIPTION = "Chair " &amp; ChairModel;
+
+</IMPLICATION>
+      <DESCRIPTION>Define item name</DESCRIPTION>
+      <LHS>;description@value;</LHS>
+    </RULE>
+    <RULE LABEL="Rule1">
+      <CONDITION>true</CONDITION>
+      <IMPLICATION>if ChairModel == "Standard" then
+	Armrests = false
+end if;</IMPLICATION>
+      <DESCRIPTION>Rule1</DESCRIPTION>
+      <LHS>;armrests@value;</LHS>
+    </RULE>
+    <RULE LABEL="Rule2">
+      <CONDITION>true</CONDITION>
+      <IMPLICATION>if ChairModel == "Executive" and Fabric == "Leather"
+	then 	Armrests@default = true;
+			Accessories.AdjustableArmrests@default = true;
+end if;</IMPLICATION>
+      <DESCRIPTION>Rule2</DESCRIPTION>
+      <LHS>;armrests@default;accessories.adjustablearmrests@default;</LHS>
+    </RULE>
+  </RULES>
+  <COLUMNS>
+    <COLUMN ID="Questions" LABEL="Questions" FORMAT="" WIDTH="250" />
+    <COLUMN ID="Answers" LABEL="Answers" FORMAT="" WIDTH="500" />
+  </COLUMNS>
+  <INTERFACES>
+    <INTERFACE INTERFACE="ICHAIR" VERSION="1.0.0" LABEL="ICHAIR" />
+  </INTERFACES>
+</CLASS>

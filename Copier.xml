@@ -1,0 +1,1815 @@
+<?xml version="1.0"?>
+<CLASS ID="Structure" LABEL="Structure" TYPE="" VERSION="2.0.0" ISINTERFACE="false" XSLDATASOURCE="Copier" TABLEID="QuoteDetail;27" PROCESSCONTEXTS="CRM;NAV">
+  <PROPERTIES>
+    <PROPERTY ID="Tab" LABEL="Tab" TYPE="String" VALUE="Machine" VISIBLE="false" ININTERFACE="true">
+      <OPTIONS>
+        <OPTION ID="Machine" LABEL="Machine" />
+        <OPTION ID="Diensten" LABEL="Financing / Installation" />
+        <OPTION ID="ThirdParty" LABEL="Third Party Components" VISIBLE="false" />
+      </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="ConnectionXML" LABEL="ConnectionXML" TYPE="String" VISIBLE="false">
+    </PROPERTY>
+    <PROPERTY ID="QuoteId" LABEL="Offerte" TYPE="String" VISIBLE="false" FIELDID="QuoteId;" STYLE="readonly:true">
+    </PROPERTY>
+    <PROPERTY ID="QuoteDetailId" LABEL="Quote Product" TYPE="String" VISIBLE="false" FIELDID="QuoteDetailId;" STYLE="readonly:true;key:true;keyno:1">
+    </PROPERTY>
+    <PROPERTY ID="ProductId" LABEL="Product" TYPE="String" VISIBLE="false" FIELDID="ProductId;" STYLE="readonly:true" ININTERFACE="true">
+    </PROPERTY>
+    <PROPERTY ID="UoMId" LABEL="Unit" TYPE="String" VALUE="5d7578ac-e046-4c4e-b42d-edd963543672" VISIBLE="false" FIELDID="UoMId;" STYLE="readonly:true">
+    </PROPERTY>
+    <PROPERTY ID="Quantity" LABEL="Quantity" TYPE="Double" VALUE="1" VISIBLE="false" FIELDID="Quantity;" ININTERFACE="true">
+    </PROPERTY>
+    <PROPERTY ID="UNITPRICE" LABEL="Price" TYPE="Double" VISIBLE="false" FIELDID="PricePerUnit;18" ININTERFACE="true" DOMAIN="Money;">
+    </PROPERTY>
+    <PROPERTY ID="IsPriceOverridden" LABEL="IsPriceOverridden" TYPE="Boolean" VALUE="true" VISIBLE="false" FIELDID="IsPriceOverridden;">
+    </PROPERTY>
+    <PROPERTY ID="LineItemNumber" LABEL="Line Item Number" TYPE="Long" VISIBLE="false" FIELDID="LineItemNumber;" STYLE="lineno:1" DOMAIN="Long;">
+    </PROPERTY>
+    <PROPERTY ID="Image" LABEL="Image" TYPE="String" VISIBLE="false" ININTERFACE="true">
+    </PROPERTY>
+    <PROPERTY ID="Submodel" LABEL="Submodel" TYPE="Boolean" VALUE="false" VISIBLE="false" ININTERFACE="true">
+    </PROPERTY>
+    <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+    </PROPERTY>
+    <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+    </PROPERTY>
+    <PROPERTY ID="Q" LABEL="Questions" TYPE="String" VISIBLE="false">
+    </PROPERTY>
+    <PROPERTY ID="A" LABEL="A" TYPE="String" VISIBLE="false">
+    </PROPERTY>
+    <PROPERTY ID="No" LABEL="No" TYPE="String" VISIBLE="false" FIELDID=";1" STYLE="key:true;keyno:1" ININTERFACE="true" DOMAIN="CopierNumberSeries;" KEYVALUE="MX-5000N;">
+    </PROPERTY>
+    <PROPERTY ID="Description" LABEL="Description" TYPE="String" LENGTH="50" VISIBLE="false" FIELDID=";3">
+    </PROPERTY>
+    <PROPERTY ID="BaseUnitofMeasure" LABEL="Base Unit of Measure" TYPE="String" LENGTH="10" VALUE="PCS" VISIBLE="false" FIELDID=";8">
+    </PROPERTY>
+  </PROPERTIES>
+  <REFERENCES>
+    <REFERENCE ID="Machine" LABEL="Machine" TYPE="String" VALUE="Machine" CONSTANT="true" STYLE="tree:false" ININTERFACE="true">
+      <CLASS ID="Machine" LABEL="Machine" TYPE="">
+        <PROPERTIES>
+          <PROPERTY ID="BaseMachine" LABEL="Copier Machine" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="aantal" LABEL="Quantity" TYPE="Double" VALUE="1" STYLE="control:spinner;" ININTERFACE="true">
+          </PROPERTY>
+          <PROPERTY ID="Blank8" LABEL="Blank8" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Description" LABEL="Description" TYPE="String" VISIBLE="false">
+          </PROPERTY>
+          <PROPERTY ID="Afwerken" LABEL="Treatment" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank9" LABEL="Blank9" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Basiseenheid" LABEL="Base unit" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank" LABEL="Blank" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Aansluitingen" LABEL="Connections" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank2" LABEL="Blank2" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Printen" LABEL="Printing" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank3" LABEL="Blank3" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Faxen" LABEL="Fax" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank4" LABEL="Blank4" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Scannen" LABEL="Scanning" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank5" LABEL="Blank5" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Sharpdesklicenties" LABEL="Sharpdesk lincences" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank6" LABEL="Blank6" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Beveiliging" LABEL="Security" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank7" LABEL="Blank7" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="OSAB" LABEL="Sharp OSA" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+        </PROPERTIES>
+        <REFERENCES>
+          <REFERENCE ID="BasisMachine" LABEL="Machine" TYPE="String" DYNAMIC="true" STYLE="zoom:true" ININTERFACE="true">
+            <TEMPLATE ID="Template" LABEL="Template" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Nr" LABEL="No" TYPE="String" LENGTH="15" VISIBLE="false" STYLE="zoomcolumn:true;key:true" KEYVALUE="key:true;">
+                </PROPERTY>
+                <PROPERTY ID="Omschrijving" LABEL="Omschrijving" TYPE="String" LENGTH="70" VISIBLE="false" STYLE="zoomcolumn:true;display:true">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false" STYLE="zoomcolumn:true;align:true;columnwidth:100" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false" STYLE="zoomcolumn:true;align:true;columnwidth:100" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Image" LABEL="Image" TYPE="String" VISIBLE="false" STYLE="zoomcolumn:true;image:true">
+                </PROPERTY>
+              </PROPERTIES>
+            </TEMPLATE>
+          </REFERENCE>
+          <REFERENCE ID="Afwerkingseenheid" LABEL="Treatment unit" TYPE="String">
+            <CLASS ID="MX-FNX9" LABEL="MX-FNX9" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+              <REFERENCES>
+                <REFERENCE ID="Perforatiemodule" LABEL="Perforation unit" TYPE="String">
+                  <CLASS ID="MX-PNX1A" LABEL="Perforation Unit 2 holes" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                  <CLASS ID="MX-PNX1C" LABEL="Perforation Unit 3 holes" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                </REFERENCE>
+              </REFERENCES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Finisher" LABEL="Finisher with staples in the bacj (1000 sheet)" TYPE="String">
+            <CLASS ID="MX-FNX10" LABEL="MX-FNX10" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+              <REFERENCES>
+                <REFERENCE ID="Perforatiemodule" LABEL="Perforation unit" TYPE="String">
+                  <CLASS ID="MX-PNX5A" LABEL="Perforation Unit 2 holes" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                  <CLASS ID="MX-PNX5C" LABEL="Perforation Unit 3 holes" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                </REFERENCE>
+              </REFERENCES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="ExtraGroteAfwerkingseenheid" LABEL="Extra large processing unit (4000 sheets)" TYPE="String">
+            <CLASS ID="MX-FNX11" LABEL="MX-FNX11" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+              <REFERENCES>
+                <REFERENCE ID="Perforatiemodule" LABEL="Perforation unit" TYPE="String">
+                  <CLASS ID="MX-PNX6A" LABEL="Perforation Unit 2 holes" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                  <CLASS ID="MX-PNX6C" LABEL="Perforation Unit 3 holes" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                      <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                </REFERENCE>
+              </REFERENCES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Papierdoorvoereenheid" LABEL="Paper support unit" TYPE="String">
+            <CLASS ID="MX-RBX3" LABEL="MX-RBX3" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Uitvoerladeenheid" LABEL="Output tray unit" TYPE="String">
+            <CLASS ID="MX-TRX2" LABEL="MX-TRX2" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Voet_Kast" LABEL="Base / Cabinet" TYPE="String" MANDATORY="true">
+            <CLASS ID="MX-DEX9" LABEL="Base including 2 paper drawers of 500 sheet" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-DEX8" LABEL="Base including 1 paper drawer of 500 sheet" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-DK131" LABEL="Cabinet" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-LCX1" LABEL="High capacity base of 3500 sheets" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Toetsenbord" LABEL="Keyboard" TYPE="String">
+            <CLASS ID="MX-KBX2" LABEL="MX-KBX2" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Extrageheugen" LABEL="Additional memory module (1GB)" TYPE="String">
+            <CLASS ID="MX-SMX3" LABEL="MX-SMX3" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="PS3Uitbreidingskit" LABEL="PS3 extension kit" TYPE="String">
+            <CLASS ID="MX-PKX1" LABEL="MX-PKX1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="XPSUitbreidingskit" LABEL="XPS extension kit" TYPE="String">
+            <CLASS ID="MX-PUX1" LABEL="MX-PUX1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="XPSUitbreidingskit2" LABEL="Barcode-font package" TYPE="String">
+            <CLASS ID="AR-PF1" LABEL="AR-PF1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Faxuitbreidingskit" LABEL="Fax extension kit" TYPE="String">
+            <CLASS ID="MX-FXX2" LABEL="MX-FXX2" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Internetfaxuitbreidingskit" LABEL="Internet fax extension kit" TYPE="String">
+            <CLASS ID="MX-FWX1" LABEL="MX-FWX1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Stempeleenheid" LABEL="Stample unit" TYPE="String">
+            <CLASS ID="AR-SU1" LABEL="AR-SU1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="EnhancedCompressionKit" LABEL="Enhanced Compression Kit" TYPE="String">
+            <CLASS ID="MX-EBX3" LABEL="MX-EBX3" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Licenties" LABEL="Licences" TYPE="String">
+            <CLASS ID="MX-USX1" LABEL="1 user" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="5 users" LABEL="5 users" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-US10" LABEL="10 users" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-US50" LABEL="50 users" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-USA0" LABEL="100 users" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="DataSecurityKit" LABEL="Data Security Kit" TYPE="String">
+            <CLASS ID="MX-FR11U" LABEL="Data Security Kit, commercial edition" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+            <CLASS ID="MX-FR11" LABEL="Data Security Kit, Common Certified" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Applicatieintegratiemodule" LABEL="Application integration module" TYPE="String">
+            <CLASS ID="MX-AMX1" LABEL="MX-AMX1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Applicatiecommunicatiemodule" LABEL="Applicatiecommunicatiemodule" TYPE="String">
+            <CLASS ID="MX-AMX2" LABEL="MX-AMX2" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Externeaccountmodule" LABEL="External account module" TYPE="String">
+            <CLASS ID="MX-AMX3" LABEL="MX-AMX3" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="Prijs" LABEL="Sales price" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+        </REFERENCES>
+      </CLASS>
+    </REFERENCE>
+    <REFERENCE ID="Diensten" LABEL="Services" TYPE="String" VALUE="Diensten" CONSTANT="true" STYLE="tree:false" ININTERFACE="true">
+      <CLASS ID="Diensten" LABEL="Financiering / Diensten" TYPE="">
+        <PROPERTIES>
+          <PROPERTY ID="Diensten" LABEL="Services" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Installatie" LABEL="Installation ?" TYPE="Boolean" VALUE="false" STYLE="radio:true;cols:2">
+          </PROPERTY>
+          <PROPERTY ID="NetwerkInstallatie" LABEL="Network installation ?" TYPE="Boolean" VALUE="false" STYLE="radio:true;cols:2">
+          </PROPERTY>
+          <PROPERTY ID="Blank" LABEL="Blank" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Financiering" LABEL="Finance" TYPE="String" STYLE="controlclass:hidden;labelclass:sectionlabel">
+          </PROPERTY>
+          <PROPERTY ID="Blank2" LABEL="Blank2" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+          <PROPERTY ID="Lease" LABEL="Lease" TYPE="Boolean" VALUE="true" STYLE="radio:true;cols:2">
+          </PROPERTY>
+          <PROPERTY ID="Rente" LABEL="Interest" TYPE="Double" VALUE="0.056" FORMAT="{0:P}">
+          </PROPERTY>
+          <PROPERTY ID="Looptijd" LABEL="Duration" TYPE="Double" VALUE="60" STYLE="format: {0} month" INPUTVALIDATION="min:6;max:72">
+          </PROPERTY>
+        </PROPERTIES>
+        <REFERENCES>
+          <REFERENCE ID="Service" LABEL="Service" TYPE="String" VALUE="Service" STYLE="autoexpand:true;control:matrixproperties" ININTERFACE="true">
+            <CLASS ID="Service" LABEL="Service" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="AantalKopieeen" LABEL="Number of copies" TYPE="Double" ININTERFACE="true" INPUTVALIDATION="multiplication:1000">
+                </PROPERTY>
+                <PROPERTY ID="ServiceContract" LABEL="Service Contract" TYPE="String" STYLE="columnwidth:150" ININTERFACE="true">
+                  <OPTIONS>
+                    <OPTION ID="4uur" LABEL="4 hour response" />
+                    <OPTION ID="8uur" LABEL="8 hour response" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="ServiceBedrag" LABEL="Service rate" TYPE="Double" STYLE="align:right " ININTERFACE="true" FORMAT="{0:C}">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="Prijzen" LABEL="Prices" TYPE="String" VALUE="Prijzen" STYLE="autoexpand:true;control:matrixproperties" ININTERFACE="true">
+            <CLASS ID="Prijzen" LABEL="Prijzen" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="VerkoopprijsBruto" LABEL="Sales price" TYPE="Double" STYLE="align:right " ININTERFACE="true" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Montage" LABEL="Installation" TYPE="Double" VISIBLE="false" STYLE="format: {0} hrs;align:right" ININTERFACE="true">
+                </PROPERTY>
+                <PROPERTY ID="Montage2" LABEL="Installation" TYPE="Double" STYLE="align:right " ININTERFACE="true" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Korting" LABEL="Discount" TYPE="Double" STYLE="align:right;cols:10" ININTERFACE="true" FORMAT="{0:P}">
+                </PROPERTY>
+                <PROPERTY ID="VerkoopprijsNetto" LABEL="Nett sales price" TYPE="Double" STYLE="align:right " ININTERFACE="true" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Kostprijs" LABEL="Cost" TYPE="Double" VISIBLE="false" STYLE="align:right " ININTERFACE="true">
+                </PROPERTY>
+                <PROPERTY ID="Marge" LABEL="Margin" TYPE="Double" STYLE="align:right " ININTERFACE="true" FORMAT="{0:P}">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+          <REFERENCE ID="LeaseTarief" LABEL="Lease rate" TYPE="String" VALUE="Prijzen" STYLE="autoexpand:true;control:matrixproperties">
+            <CLASS ID="Prijzen" LABEL="Prijzen" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="NormTarief" LABEL="Rate (norm)" TYPE="Double" STYLE="format: {0} per month;align:right" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Tarief" LABEL="Rate" TYPE="Double" STYLE="columnwidth:120;align:right;cols:10" FORMAT="{0:C2}">
+                </PROPERTY>
+                <PROPERTY ID="Provisie" LABEL="Commission" TYPE="Double" STYLE="columnwidth:120;align:right" FORMAT="{0:C2}">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+        </REFERENCES>
+      </CLASS>
+    </REFERENCE>
+    <REFERENCE ID="ThirdPartyComponents" LABEL="ThirdPartyComponents" TYPE="String" VALUE="Class1" CONSTANT="true" STYLE="tree:false">
+      <CLASS ID="Class1" LABEL="Class1" TYPE="">
+        <PROPERTIES>
+          <PROPERTY ID="Blank8" LABEL="Blank8" TYPE="String" STYLE="controlclass:hidden;labelclass:hidden">
+          </PROPERTY>
+        </PROPERTIES>
+        <REFERENCES>
+          <REFERENCE ID="Import[1]" LABEL="Import[1]" TYPE="String" VALUE="Class1" ENABLED="false" STYLE="tree:false">
+            <CLASS ID="Class1" LABEL="Class1" TYPE="">
+              <PROPERTIES>
+                <PROPERTY ID="FileName" LABEL="File Name" TYPE="String" VALUE="PO89999">
+                </PROPERTY>
+                <PROPERTY ID="StartImport" LABEL="Start Import" TYPE="Boolean" VALUE="false" STYLE="valuebutton:true">
+                </PROPERTY>
+              </PROPERTIES>
+              <REFERENCES>
+                <REFERENCE ID="Items" LABEL="Items" TYPE="String" VISIBLE="false" DYNAMIC="true">
+                  <TEMPLATE ID="Template" LABEL="Template" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="ItemId" LABEL="ItemId" TYPE="String" FIELDID="ItemId;" STYLE="key:true">
+                      </PROPERTY>
+                      <PROPERTY ID="ItemName" LABEL="Item Name" TYPE="String" FIELDID="ItemName;" STYLE="display:true">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </TEMPLATE>
+                </REFERENCE>
+                <REFERENCE ID="Item[1]" LABEL="Item[1]" TYPE="String" VALUE="Class1" STYLE="control:matrixproperties">
+                  <CLASS ID="Class1" LABEL="Class1" TYPE="">
+                    <PROPERTIES>
+                      <PROPERTY ID="ItemId" LABEL="ItemId" TYPE="String" STYLE="key:true">
+                      </PROPERTY>
+                      <PROPERTY ID="Name" LABEL="Name" TYPE="String" STYLE="display:true">
+                      </PROPERTY>
+                      <PROPERTY ID="Price" LABEL="Price" TYPE="Double" STYLE="align:right;" FORMAT="{0:C2}">
+                      </PROPERTY>
+                    </PROPERTIES>
+                  </CLASS>
+                </REFERENCE>
+              </REFERENCES>
+            </CLASS>
+          </REFERENCE>
+        </REFERENCES>
+      </CLASS>
+    </REFERENCE>
+    <REFERENCE ID="ProductionBOMNo" LABEL="Production BOM No." TYPE="String" VALUE="99000771" VISIBLE="false" FIELDID=";Production BOM No." TABLEID=";99000771" STYLE="autoexpand:true">
+      <CLASS ID="99000771" LABEL="Production BOM Header" TYPE="" ENTITY="99000771" ENTITYVERSION="1.0.0" TABLEID=";99000771">
+        <PROPERTIES>
+          <PROPERTY ID="No" LABEL="No" TYPE="String" FIELDID=";1" STYLE="key:true;keyno:1" DOMAIN="ProductionBomNo;">
+          </PROPERTY>
+          <PROPERTY ID="Description" LABEL="Description" TYPE="String" LENGTH="30" FIELDID=";10">
+          </PROPERTY>
+          <PROPERTY ID="Description2" LABEL="Description 2" TYPE="String" LENGTH="30" FIELDID=";11">
+          </PROPERTY>
+          <PROPERTY ID="UnitofMeasureCode" LABEL="Unit of Measure Code" TYPE="String" LENGTH="10" VALUE="PCS" FIELDID=";21">
+          </PROPERTY>
+        </PROPERTIES>
+        <REFERENCES>
+          <REFERENCE ID="ProductionBOMLine[1]" LABEL="Production BOM Line[1]" TYPE="String" FIELDID=";Production BOM Line" TABLEID=";99000772">
+            <CLASS ID="99000772" LABEL="Production BOM Line" TYPE="" ENTITY="99000772" ENTITYVERSION="1.0.0" TABLEID=";99000772">
+              <PROPERTIES>
+                <PROPERTY ID="LineNo" LABEL="LineNo" TYPE="String" FIELDID=";2" STYLE="key:true;keyno:3" DOMAIN="AutoIncrement;">
+                </PROPERTY>
+                <PROPERTY ID="ProductionBOMNo" LABEL="Production BOM No." TYPE="String" LENGTH="20" FIELDID=";1" STYLE="key:true;keyno:1">
+                </PROPERTY>
+                <PROPERTY ID="VersionCode" LABEL="Version Code" TYPE="String" LENGTH="10" FIELDID=";3" STYLE="key:true;keyno:2">
+                </PROPERTY>
+                <PROPERTY ID="No" LABEL="No" TYPE="String" LENGTH="20" VALUE="005682" FIELDID=";11" KEYVALUE=";">
+                </PROPERTY>
+                <PROPERTY ID="Type" LABEL="Type" TYPE="Long" VALUE="1" FIELDID=";10">
+                  <OPTIONS>
+                    <OPTION ID="2" LABEL="Production BOM" />
+                    <OPTION ID="0" LABEL=" " />
+                    <OPTION ID="1" LABEL="Item" />
+                  </OPTIONS>
+                </PROPERTY>
+                <PROPERTY ID="Quantityper" LABEL="Quantity per" TYPE="Double" VALUE="1" FIELDID=";45">
+                </PROPERTY>
+              </PROPERTIES>
+            </CLASS>
+          </REFERENCE>
+        </REFERENCES>
+      </CLASS>
+    </REFERENCE>
+  </REFERENCES>
+  <RULES LABEL="Rules" DESCRIPTION="">
+    <RULES LABEL="Init" DESCRIPTION="">
+      <RULE LABEL="Get Connection">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>ConnectionXML = GetSetting("Data.XML.Connectionstring") &amp; "Sharp-econ2.xml";</IMPLICATION>
+        <DESCRIPTION>Get Connection</DESCRIPTION>
+        <LHS>;connectionxml@value;</LHS>
+      </RULE>
+      <RULE LABEL="Get QuoteId Arg">
+        <CONDITION>Not(submodel)</CONDITION>
+        <IMPLICATION>QuoteId = GetArg("quoteid");</IMPLICATION>
+        <DESCRIPTION>Get QuoteId Arg</DESCRIPTION>
+        <LHS>;quoteid@value;</LHS>
+      </RULE>
+    </RULES>
+    <RULES LABEL="UI" DESCRIPTION="">
+      <RULE LABEL="Tabs">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Machine@visible = Tab == "Machine";
+Diensten@visible = Tab == "Diensten";
+ThirdPartyComponents@visible = Tab == "ThirdParty";
+</IMPLICATION>
+        <DESCRIPTION>Tabs</DESCRIPTION>
+        <LHS>;machine@visible;diensten@visible;thirdpartycomponents@visible;</LHS>
+      </RULE>
+      <RULE LABEL="Lease alleen zichtbaar wanneer gekozen">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Diensten.Rente@visible = Diensten.Lease;
+Diensten.Looptijd@visible = Diensten.Lease;
+Diensten.LeaseTarief@visible = Diensten.Lease;</IMPLICATION>
+        <DESCRIPTION>Lease alleen zichtbaar wanneer gekozen</DESCRIPTION>
+        <LHS>;diensten.rente@visible;diensten.looptijd@visible;diensten.leasetarief@visible;</LHS>
+      </RULE>
+      <RULE LABEL="Installatie kosten allleen zichtbaar indien installatie gekozen">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Diensten.Prijzen.Montage2@visible = Diensten.Installatie;
+Diensten.Prijzen.Montage@visible = Diensten.Installatie;</IMPLICATION>
+        <DESCRIPTION>Installatie kosten allleen zichtbaar indien installatie gekozen</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="Netwerkinstallatie alleen mogelijk indien fax of internetuitbreidingkit besteld">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Diensten.NetwerkInstallatie@visible =
+Machine.Faxuitbreidingskit &lt;&gt; "" or Machine.Internetfaxuitbreidingskit &lt;&gt; "";</IMPLICATION>
+        <DESCRIPTION>Netwerkinstallatie alleen mogelijk indien fax of internetuitbreidingkit besteld</DESCRIPTION>
+      </RULE>
+      <RULES LABEL="Plaatjes" DESCRIPTION="">
+        <RULE LABEL="Basiseenheid">
+          <CONDITION>Machine.BasisMachine &lt;&gt; ""</CONDITION>
+          <IMPLICATION>Machine.BasisMachine@style.imgsrc = 
+"./images/copier/" &amp; Machine.BasisMachine &amp; ".png";
+Machine.BasisMachine@style.imgtop = "40";
+Machine.BasisMachine@style.imgleft = "25";
+Machine.BasisMachine@style.imgwidth = "350";
+image = Machine.BasisMachine@style.imgsrc;</IMPLICATION>
+          <DESCRIPTION>Basiseenheid</DESCRIPTION>
+          <LHS>;image@value;</LHS>
+        </RULE>
+      </RULES>
+      <RULE LABEL="Read description">
+        <CONDITION>Machine.BasisMachine &lt;&gt; ""</CONDITION>
+        <IMPLICATION>//Machine.Description = GetStringValue(ConnectionXML; "DESCRIPTIONS"; "Omschrijving"; "Nr"; "="; Machine.BasisMachine)</IMPLICATION>
+        <DESCRIPTION>Read description</DESCRIPTION>
+        <LHS>;</LHS>
+      </RULE>
+      <RULE LABEL="Columns">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Prijs@column = TAB == "Machine";
+Montage@column = TAB == "Machine";
+A@style.columnwidth = 
+if TAB == "Machine"
+then "400"
+else "600"
+end if</IMPLICATION>
+        <DESCRIPTION>Columns</DESCRIPTION>
+        <LHS>;</LHS>
+      </RULE>
+    </RULES>
+    <RULES LABEL="Constraints" DESCRIPTION="">
+      <RULE LABEL="Looptijd langer dan 72 maanden niet toegestaan">
+        <CONDITION>Diensten.Looptijd &gt; 72</CONDITION>
+        <IMPLICATION>MsgBox("Contract duration of more then 72 months is not permitted") &lt;&gt; 1</IMPLICATION>
+        <DESCRIPTION>Looptijd langer dan 72 maanden niet toegestaan</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="MX-RBX3 verplicht bij gebruik van MX-FN10">
+        <CONDITION>Machine.Finisher &lt;&gt; "" and Machine.Papierdoorvoereenheid == ""</CONDITION>
+        <IMPLICATION>local long msg;
+msg = MsgBox("Additional Paper support unit is required and added.");
+
+Machine.Papierdoorvoereenheid@default = "x";
+Machine.Papierdoorvoereenheid = "MX-RBX3"</IMPLICATION>
+        <DESCRIPTION>MX-RBX3 verplicht bij gebruik van MX-FN10</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="Reset MX-RBX3 verplicht bij gebruik van MX-FN10">
+        <CONDITION>Machine.Finisher == ""</CONDITION>
+        <IMPLICATION>Machine.Papierdoorvoereenheid@default = ""</IMPLICATION>
+        <DESCRIPTION>Reset MX-RBX3 verplicht bij gebruik van MX-FN10</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="MX-SMX3 verplicht bij kiezen van MX-PUX1">
+        <CONDITION>Machine.XPSUitbreidingskit &lt;&gt; "" and Machine.Extrageheugen == ""</CONDITION>
+        <IMPLICATION>local long msg;
+msg = MsgBox("Additional memory module (1GB) is required and added.");
+
+Machine.Extrageheugen@default = "x";
+Machine.Extrageheugen = "MX-SMX3"</IMPLICATION>
+        <DESCRIPTION>MX-SMX3 verplicht bij kiezen van MX-PUX1</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="Reset MX-SMX3 verplicht bij kiezen van MX-PUX1">
+        <CONDITION>Machine.XPSUitbreidingskit == ""</CONDITION>
+        <IMPLICATION>Machine.Extrageheugen@default = ""</IMPLICATION>
+        <DESCRIPTION>Reset MX-SMX3 verplicht bij kiezen van MX-PUX1</DESCRIPTION>
+      </RULE>
+      <RULES LABEL="Product" DESCRIPTION="">
+        <RULE LABEL="MX-5000N">
+          <CONDITION>Machine.BasisMachine == "MX-5000N"
+</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid@default = "";
+Machine.Afwerkingseenheid.Perforatiemodule@default = "";
+Machine.Finisher@default = "";
+Machine.Finisher.Perforatiemodule@default = "";
+Machine.ExtraGroteAfwerkingseenheid@default = "";
+Machine.ExtraGroteAfwerkingseenheid.Perforatiemodule@default = "";
+Machine.Papierdoorvoereenheid@default = "";
+Machine.Uitvoerladeenheid@default = "";
+Machine.Voet_Kast@default = "";
+Machine.Toetsenbord@default = "";
+Machine.Extrageheugen@default = "";
+Machine.PS3Uitbreidingskit@default = "";
+Machine.XPSUitbreidingskit@default = "";
+Machine.XPSUitbreidingskit2@default = "";
+Machine.Faxuitbreidingskit@default = "";
+Machine.Internetfaxuitbreidingskit@default = "";
+Machine.Stempeleenheid@default = "";
+Machine.EnhancedCompressionKit@default = "";
+Machine.Licenties@default = "";
+Machine.DataSecurityKit@default = "";
+Machine.Applicatieintegratiemodule@default = "";
+Machine.Applicatiecommunicatiemodule@default = "";
+Machine.Externeaccountmodule@default = "";
+</IMPLICATION>
+          <DESCRIPTION>MX-5000N</DESCRIPTION>
+          <LHS>Machine.Externeaccountmodule@Default</LHS>
+        </RULE>
+        <RULE LABEL="MX-5010N">
+          <CONDITION>Machine.BasisMachine == "MX-5001N" </CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid@default = "MX-FNX9";
+Machine.Afwerkingseenheid.Perforatiemodule@default = "MX-PNX1A";
+Machine.Finisher@default = "";
+Machine.Finisher.Perforatiemodule@default = "";
+Machine.ExtraGroteAfwerkingseenheid@default = "";
+Machine.ExtraGroteAfwerkingseenheid.Perforatiemodule@default = "";
+Machine.Papierdoorvoereenheid@default = "MX-RBX3";
+Machine.Uitvoerladeenheid@default = "";
+Machine.Voet_Kast@default = "MX-DEX9";
+Machine.Toetsenbord@default = "";
+Machine.Extrageheugen@default = "";
+Machine.PS3Uitbreidingskit@default = "";
+Machine.XPSUitbreidingskit@default = "";
+Machine.XPSUitbreidingskit2@default = "";
+Machine.Faxuitbreidingskit@default = "";
+Machine.Internetfaxuitbreidingskit@default = "";
+Machine.Stempeleenheid@default = "";
+Machine.EnhancedCompressionKit@default = "";
+Machine.Licenties@default = "";
+Machine.DataSecurityKit@default = "";
+Machine.Applicatieintegratiemodule@default = "";
+Machine.Applicatiecommunicatiemodule@default = "";
+Machine.Externeaccountmodule@default = "";
+</IMPLICATION>
+          <DESCRIPTION>MX-5010N</DESCRIPTION>
+          <LHS>;machine.afwerkingseenheid@default;machine.afwerkingseenheid.perforatiemodule@default;machine.finisher@default;machine.finisher.perforatiemodule@default;machine.extragroteafwerkingseenheid@default;machine.extragroteafwerkingseenheid.perforatiemodule@default;machine.papierdoorvoereenheid@default;machine.uitvoerladeenheid@default;machine.voet_kast@default;machine.toetsenbord@default;machine.extrageheugen@default;machine.ps3uitbreidingskit@default;machine.xpsuitbreidingskit@default;machine.xpsuitbreidingskit2@default;machine.faxuitbreidingskit@default;machine.internetfaxuitbreidingskit@default;machine.stempeleenheid@default;machine.enhancedcompressionkit@default;machine.licenties@default;machine.datasecuritykit@default;machine.applicatieintegratiemodule@default;machine.applicatiecommunicatiemodule@default;machine.externeaccountmodule@default;</LHS>
+        </RULE>
+        <RULE LABEL="MX-5112N">
+          <CONDITION>Machine.BasisMachine == "MX-5112N"</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid@default = "MX-FNX9";
+Machine.Afwerkingseenheid.Perforatiemodule@default = "MX-PNX1A";
+Machine.Finisher@default = "";
+Machine.Finisher.Perforatiemodule@default = "";
+Machine.ExtraGroteAfwerkingseenheid@default = "";
+Machine.ExtraGroteAfwerkingseenheid.Perforatiemodule@default = "";
+Machine.Papierdoorvoereenheid@default = "MX-RBX3";
+Machine.Uitvoerladeenheid@default = "MX-TRX2";
+Machine.Voet_Kast@default = "MX-DEX9";
+Machine.Toetsenbord@default = "MX-KBX2";
+Machine.Extrageheugen@default = "";
+Machine.PS3Uitbreidingskit@default = "";
+Machine.XPSUitbreidingskit@default = "";
+Machine.XPSUitbreidingskit2@default = "";
+Machine.Faxuitbreidingskit@default = "";
+Machine.Internetfaxuitbreidingskit@default = "";
+Machine.Stempeleenheid@default = "AR-SU1";
+Machine.EnhancedCompressionKit@default = "MX-EBX3";
+Machine.Licenties@default = "";
+Machine.DataSecurityKit@default = "MX-FR11U";
+Machine.Applicatieintegratiemodule@default = "";
+Machine.Applicatiecommunicatiemodule@default = "";
+Machine.Externeaccountmodule@default = "";</IMPLICATION>
+          <DESCRIPTION>MX-5112N</DESCRIPTION>
+          <LHS>Machine.Externeaccountmodule@Default</LHS>
+        </RULE>
+        <RULE LABEL="MX-6201N">
+          <CONDITION>Machine.BasisMachine == "MX-6201N"</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid@default = "MX-FNX9";
+Machine.Afwerkingseenheid.Perforatiemodule@default = "MX-PNX1A";
+Machine.Finisher@default = "MX-FNX10";
+Machine.Finisher.Perforatiemodule@default = "MX-PNX5A";
+Machine.ExtraGroteAfwerkingseenheid@default = "";
+Machine.ExtraGroteAfwerkingseenheid.Perforatiemodule@default = "";
+Machine.Papierdoorvoereenheid@default = "MX-RBX3";
+Machine.Uitvoerladeenheid@default = "MX-TRX2";
+Machine.Voet_Kast@default = "MX-DEX8";
+Machine.Toetsenbord@default = "MX-KBX2";
+Machine.Extrageheugen@default = "";
+Machine.PS3Uitbreidingskit@default = "";
+Machine.XPSUitbreidingskit@default = "";
+Machine.XPSUitbreidingskit2@default = "";
+Machine.Faxuitbreidingskit@default = "";
+Machine.Internetfaxuitbreidingskit@default = "";
+Machine.Stempeleenheid@default = "";
+Machine.EnhancedCompressionKit@default = "";
+Machine.Licenties@default = "";
+Machine.DataSecurityKit@default = "MX-FR11U";
+Machine.Applicatieintegratiemodule@default = "";
+Machine.Applicatiecommunicatiemodule@default = "";
+Machine.Externeaccountmodule@default = "";</IMPLICATION>
+          <DESCRIPTION>MX-6201N</DESCRIPTION>
+          <LHS>Machine.Externeaccountmodule@Default</LHS>
+        </RULE>
+        <RULE LABEL="MX-6240N">
+          <CONDITION>Machine.BasisMachine == "MX-6240N"</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid@default = "MX-FNX9";
+Machine.Afwerkingseenheid.Perforatiemodule@default = "MX-PNX1C";
+Machine.Finisher@default = "MX-FNX10";
+Machine.Finisher.Perforatiemodule@default = "MX-PNX5A";
+Machine.ExtraGroteAfwerkingseenheid@default = "MX-FNX11";
+Machine.ExtraGroteAfwerkingseenheid.Perforatiemodule@default = "MX-PNX6A";
+Machine.Papierdoorvoereenheid@default = "MX-RBX3";
+Machine.Uitvoerladeenheid@default = "MX-TRX2";
+Machine.Voet_Kast@default = "MX-DK131";
+Machine.Toetsenbord@default = "";
+Machine.Extrageheugen@default = "MX-SMX3";
+Machine.PS3Uitbreidingskit@default = "";
+Machine.XPSUitbreidingskit@default = "";
+Machine.XPSUitbreidingskit2@default = "AR-PF1";
+Machine.Faxuitbreidingskit@default = "MX-FXX2";
+Machine.Internetfaxuitbreidingskit@default = "MX-FWX1";
+Machine.Stempeleenheid@default = "";
+Machine.EnhancedCompressionKit@default = "";
+Machine.Licenties@default = "";
+Machine.DataSecurityKit@default = "MX-FR11U2";
+Machine.Applicatieintegratiemodule@default = "MX-AMX1";
+Machine.Applicatiecommunicatiemodule@default = "MX-AMX2";
+Machine.Externeaccountmodule@default = "MX-AMX3";</IMPLICATION>
+          <DESCRIPTION>MX-6240N</DESCRIPTION>
+          <LHS>Machine.Externeaccountmodule@Default</LHS>
+        </RULE>
+        <RULE LABEL="MX-7040N">
+          <CONDITION>Machine.BasisMachine == "MX-7040N"</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid@default = "MX-FNX9";
+Machine.Afwerkingseenheid.Perforatiemodule@default = "MX-PNX1C";
+Machine.Finisher@default = "MX-FNX10";
+Machine.Finisher.Perforatiemodule@default = "MX-PNX5C";
+Machine.ExtraGroteAfwerkingseenheid@default = "MX-FNX11";
+Machine.ExtraGroteAfwerkingseenheid.Perforatiemodule@default = "MX-PNX6C";
+Machine.Papierdoorvoereenheid@default = "MX-RBX3";
+Machine.Uitvoerladeenheid@default = "MX-TRX2";
+Machine.Voet_Kast@default = "MX-LCX1";
+Machine.Toetsenbord@default = "MX-KBX2";
+Machine.Extrageheugen@default = "MX-SMX3";
+Machine.PS3Uitbreidingskit@default = "MX-PKX1";
+Machine.XPSUitbreidingskit@default = "MX-PUX1";
+Machine.XPSUitbreidingskit2@default = "AR-PF1";
+Machine.Faxuitbreidingskit@default = "MX-FXX2";
+Machine.Internetfaxuitbreidingskit@default = "MX-FWX1";
+Machine.Stempeleenheid@default = "AR-SU1";
+Machine.EnhancedCompressionKit@default = "MX-EBX3";
+Machine.Licenties@default = "";
+Machine.DataSecurityKit@default = "MX-FR11";
+Machine.Applicatieintegratiemodule@default = "MX-AMX1";
+Machine.Applicatiecommunicatiemodule@default = "MX-AMX2";
+Machine.Externeaccountmodule@default = "MX-AMX3";</IMPLICATION>
+          <DESCRIPTION>MX-7040N</DESCRIPTION>
+          <LHS>Machine.Externeaccountmodule@Default</LHS>
+        </RULE>
+      </RULES>
+    </RULES>
+    <RULES LABEL="Calculations" DESCRIPTION="">
+      <RULES LABEL="Prijzen" DESCRIPTION="">
+        <RULE LABEL="Basismachine">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.BasisMachine.Prijs = 
+if Machine.BasisMachine &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.BasisMachine) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Basismachine</DESCRIPTION>
+          <LHS>;machine.basismachine.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Afwerkingseenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid.Prijs = 
+if Machine.Afwerkingseenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Afwerkingseenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Afwerkingseenheid</DESCRIPTION>
+          <LHS>;machine.afwerkingseenheid.prijs@value;</LHS>
+          <RULES LABEL="Afwerkingseenheid" DESCRIPTION="Afwerkingseenheid">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.Afwerkingseenheid.PerforatieModule.Prijs = 
+if Machine.Afwerkingseenheid.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Afwerkingseenheid.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.afwerkingseenheid.perforatiemodule.prijs@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Finisher">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Finisher.Prijs = 
+if Machine.Finisher &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Finisher) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Finisher</DESCRIPTION>
+          <LHS>;machine.finisher.prijs@value;</LHS>
+          <RULES LABEL="Finisher" DESCRIPTION="Finisher">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.Finisher.PerforatieModule.Prijs = 
+if Machine.Finisher.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Finisher.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.finisher.perforatiemodule.prijs@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Extra grote ExtraGroteAfwerkingseenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.ExtraGroteAfwerkingseenheid.Prijs = 
+if Machine.ExtraGroteAfwerkingseenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.ExtraGroteAfwerkingseenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Extra grote ExtraGroteAfwerkingseenheid</DESCRIPTION>
+          <LHS>;machine.extragroteafwerkingseenheid.prijs@value;</LHS>
+          <RULES LABEL="Extra grote ExtraGroteAfwerkingseenheid" DESCRIPTION="Extra grote ExtraGroteAfwerkingseenheid">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.ExtraGroteAfwerkingseenheid.PerforatieModule.Prijs = 
+if Machine.ExtraGroteAfwerkingseenheid.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.ExtraGroteAfwerkingseenheid.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.extragroteafwerkingseenheid.perforatiemodule.prijs@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Papierdoorvoereenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Papierdoorvoereenheid.Prijs = 
+if Machine.Papierdoorvoereenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Papierdoorvoereenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Papierdoorvoereenheid</DESCRIPTION>
+          <LHS>;machine.papierdoorvoereenheid.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Uitvoerladeenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Uitvoerladeenheid.Prijs = 
+if Machine.Uitvoerladeenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Uitvoerladeenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Uitvoerladeenheid</DESCRIPTION>
+          <LHS>;machine.uitvoerladeenheid.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Voet_Kast">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Voet_Kast.Prijs = 
+if Machine.Voet_Kast &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Voet_Kast) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Voet_Kast</DESCRIPTION>
+          <LHS>;machine.voet_kast.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Toetsenbord">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Toetsenbord.Prijs = 
+if Machine.Toetsenbord &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Toetsenbord) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Toetsenbord</DESCRIPTION>
+          <LHS>;machine.toetsenbord.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Extrageheugen">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Extrageheugen.Prijs = 
+if Machine.Extrageheugen &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Extrageheugen) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Extrageheugen</DESCRIPTION>
+          <LHS>;machine.extrageheugen.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="PS3Uitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.PS3Uitbreidingskit.Prijs = 
+if Machine.PS3Uitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.PS3Uitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>PS3Uitbreidingskit</DESCRIPTION>
+          <LHS>;machine.ps3uitbreidingskit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="XPSUitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.XPSUitbreidingskit.Prijs = 
+if Machine.XPSUitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.XPSUitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>XPSUitbreidingskit</DESCRIPTION>
+          <LHS>;machine.xpsuitbreidingskit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="XPSUitbreidingskit3">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.XPSUitbreidingskit.Prijs = 
+if Machine.XPSUitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.XPSUitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>XPSUitbreidingskit3</DESCRIPTION>
+          <LHS>;machine.xpsuitbreidingskit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Faxuitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Faxuitbreidingskit.Prijs = 
+if Machine.Faxuitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Faxuitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Faxuitbreidingskit</DESCRIPTION>
+          <LHS>;machine.faxuitbreidingskit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Internetfaxuitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Internetfaxuitbreidingskit.Prijs = 
+if Machine.Internetfaxuitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Internetfaxuitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Internetfaxuitbreidingskit</DESCRIPTION>
+          <LHS>;machine.internetfaxuitbreidingskit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Stempeleenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Stempeleenheid.Prijs = 
+if Machine.Stempeleenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Stempeleenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Stempeleenheid</DESCRIPTION>
+          <LHS>;machine.stempeleenheid.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="EnhancedCompressionKit7">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.EnhancedCompressionKit.Prijs = 
+if Machine.EnhancedCompressionKit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.EnhancedCompressionKit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>EnhancedCompressionKit</DESCRIPTION>
+          <LHS>;machine.enhancedcompressionkit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Licenties">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Licenties.Prijs = 
+if Machine.Licenties &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Licenties) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Licenties</DESCRIPTION>
+          <LHS>;machine.licenties.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="DataSecurityKit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.DataSecurityKit.Prijs = 
+if Machine.DataSecurityKit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.DataSecurityKit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>DataSecurityKit</DESCRIPTION>
+          <LHS>;machine.datasecuritykit.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Applicatieintegratiemodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Applicatieintegratiemodule.Prijs = 
+if Machine.Applicatieintegratiemodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Applicatieintegratiemodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Applicatieintegratiemodule</DESCRIPTION>
+          <LHS>;machine.applicatieintegratiemodule.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Applicatiecommunicatiemodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Applicatiecommunicatiemodule.Prijs = 
+if Machine.Applicatiecommunicatiemodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Applicatiecommunicatiemodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Applicatiecommunicatiemodule</DESCRIPTION>
+          <LHS>;machine.applicatiecommunicatiemodule.prijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Externeaccountmodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Externeaccountmodule.Prijs = 
+if Machine.Externeaccountmodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Prijs"; "Nr"; "="; Machine.Externeaccountmodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Externeaccountmodule</DESCRIPTION>
+          <LHS>;machine.externeaccountmodule.prijs@value;</LHS>
+        </RULE>
+      </RULES>
+      <RULES LABEL="KostPrijzen" DESCRIPTION="">
+        <RULE LABEL="Basismachine">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.BasisMachine.Kostprijs = 
+if Machine.BasisMachine &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.BasisMachine) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Basismachine</DESCRIPTION>
+          <LHS>;machine.basismachine.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Afwerkingseenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid.Kostprijs = 
+if Machine.Afwerkingseenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Afwerkingseenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Afwerkingseenheid</DESCRIPTION>
+          <LHS>;machine.afwerkingseenheid.kostprijs@value;</LHS>
+          <RULES LABEL="Afwerkingseenheid" DESCRIPTION="Afwerkingseenheid">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.Afwerkingseenheid.PerforatieModule.Kostprijs = 
+if Machine.Afwerkingseenheid.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Afwerkingseenheid.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.afwerkingseenheid.perforatiemodule.kostprijs@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Finisher">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Finisher.Kostprijs = 
+if Machine.Finisher &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Finisher) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Finisher</DESCRIPTION>
+          <LHS>;machine.finisher.kostprijs@value;</LHS>
+          <RULES LABEL="Finisher" DESCRIPTION="Finisher">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.Finisher.PerforatieModule.Kostprijs = 
+if Machine.Finisher.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Finisher.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.finisher.perforatiemodule.kostprijs@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Extra grote ExtraGroteAfwerkingseenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.ExtraGroteAfwerkingseenheid.Kostprijs = 
+if Machine.ExtraGroteAfwerkingseenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.ExtraGroteAfwerkingseenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Extra grote ExtraGroteAfwerkingseenheid</DESCRIPTION>
+          <LHS>;machine.extragroteafwerkingseenheid.kostprijs@value;</LHS>
+          <RULES LABEL="Extra grote ExtraGroteAfwerkingseenheid" DESCRIPTION="Extra grote ExtraGroteAfwerkingseenheid">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.ExtraGroteAfwerkingseenheid.PerforatieModule.Kostprijs = 
+if Machine.ExtraGroteAfwerkingseenheid.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.ExtraGroteAfwerkingseenheid.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.extragroteafwerkingseenheid.perforatiemodule.kostprijs@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Papierdoorvoereenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Papierdoorvoereenheid.Kostprijs = 
+if Machine.Papierdoorvoereenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Papierdoorvoereenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Papierdoorvoereenheid</DESCRIPTION>
+          <LHS>;machine.papierdoorvoereenheid.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Uitvoerladeenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Uitvoerladeenheid.Kostprijs = 
+if Machine.Uitvoerladeenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Uitvoerladeenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Uitvoerladeenheid</DESCRIPTION>
+          <LHS>;machine.uitvoerladeenheid.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Voet_Kast">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Voet_Kast.Kostprijs = 
+if Machine.Voet_Kast &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Voet_Kast) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Voet_Kast</DESCRIPTION>
+          <LHS>;machine.voet_kast.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Toetsenbord">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Toetsenbord.Kostprijs = 
+if Machine.Toetsenbord &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Toetsenbord) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Toetsenbord</DESCRIPTION>
+          <LHS>;machine.toetsenbord.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Extrageheugen">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Extrageheugen.Kostprijs = 
+if Machine.Extrageheugen &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Extrageheugen) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Extrageheugen</DESCRIPTION>
+          <LHS>;machine.extrageheugen.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="PS3Uitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.PS3Uitbreidingskit.Kostprijs = 
+if Machine.PS3Uitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.PS3Uitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>PS3Uitbreidingskit</DESCRIPTION>
+          <LHS>;machine.ps3uitbreidingskit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="XPSUitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.XPSUitbreidingskit.Kostprijs = 
+if Machine.XPSUitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.XPSUitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>XPSUitbreidingskit</DESCRIPTION>
+          <LHS>;machine.xpsuitbreidingskit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="XPSUitbreidingskit3">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.XPSUitbreidingskit.Kostprijs = 
+if Machine.XPSUitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.XPSUitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>XPSUitbreidingskit3</DESCRIPTION>
+          <LHS>;machine.xpsuitbreidingskit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Faxuitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Faxuitbreidingskit.Kostprijs = 
+if Machine.Faxuitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Faxuitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Faxuitbreidingskit</DESCRIPTION>
+          <LHS>;machine.faxuitbreidingskit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Internetfaxuitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Internetfaxuitbreidingskit.Kostprijs = 
+if Machine.Internetfaxuitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Internetfaxuitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Internetfaxuitbreidingskit</DESCRIPTION>
+          <LHS>;machine.internetfaxuitbreidingskit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Stempeleenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Stempeleenheid.Kostprijs = 
+if Machine.Stempeleenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Stempeleenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Stempeleenheid</DESCRIPTION>
+          <LHS>;machine.stempeleenheid.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="EnhancedCompressionKit7">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.EnhancedCompressionKit.Kostprijs = 
+if Machine.EnhancedCompressionKit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.EnhancedCompressionKit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>EnhancedCompressionKit</DESCRIPTION>
+          <LHS>;machine.enhancedcompressionkit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Licenties">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Licenties.Kostprijs = 
+if Machine.Licenties &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Licenties) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Licenties</DESCRIPTION>
+          <LHS>;machine.licenties.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="DataSecurityKit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.DataSecurityKit.Kostprijs = 
+if Machine.DataSecurityKit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.DataSecurityKit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>DataSecurityKit</DESCRIPTION>
+          <LHS>;machine.datasecuritykit.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Applicatieintegratiemodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Applicatieintegratiemodule.Kostprijs = 
+if Machine.Applicatieintegratiemodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Applicatieintegratiemodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Applicatieintegratiemodule</DESCRIPTION>
+          <LHS>;machine.applicatieintegratiemodule.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Applicatiecommunicatiemodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Applicatiecommunicatiemodule.Kostprijs = 
+if Machine.Applicatiecommunicatiemodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Applicatiecommunicatiemodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Applicatiecommunicatiemodule</DESCRIPTION>
+          <LHS>;machine.applicatiecommunicatiemodule.kostprijs@value;</LHS>
+        </RULE>
+        <RULE LABEL="Externeaccountmodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Externeaccountmodule.Kostprijs = 
+if Machine.Externeaccountmodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Kostprijs"; "Nr"; "="; Machine.Externeaccountmodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Externeaccountmodule</DESCRIPTION>
+          <LHS>;machine.externeaccountmodule.kostprijs@value;</LHS>
+        </RULE>
+      </RULES>
+      <RULES LABEL="Montage" DESCRIPTION="">
+        <RULE LABEL="Basismachine">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.BasisMachine.Montage = 
+if Machine.BasisMachine &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.BasisMachine) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Basismachine</DESCRIPTION>
+          <LHS>;machine.basismachine.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Afwerkingseenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Afwerkingseenheid.Montage = 
+if Machine.Afwerkingseenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Afwerkingseenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Afwerkingseenheid</DESCRIPTION>
+          <LHS>;machine.afwerkingseenheid.montage@value;</LHS>
+          <RULES LABEL="Afwerkingseenheid" DESCRIPTION="Afwerkingseenheid">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.Afwerkingseenheid.PerforatieModule.Montage = 
+if Machine.Afwerkingseenheid.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Afwerkingseenheid.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.afwerkingseenheid.perforatiemodule.montage@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Finisher">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Finisher.Montage = 
+if Machine.Finisher &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Finisher) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Finisher</DESCRIPTION>
+          <LHS>;machine.finisher.montage@value;</LHS>
+          <RULES LABEL="Finisher" DESCRIPTION="Finisher">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.Finisher.PerforatieModule.Montage = 
+if Machine.Finisher.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Finisher.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.finisher.perforatiemodule.montage@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Extra grote ExtraGroteAfwerkingseenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.ExtraGroteAfwerkingseenheid.Montage = 
+if Machine.ExtraGroteAfwerkingseenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.ExtraGroteAfwerkingseenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Extra grote ExtraGroteAfwerkingseenheid</DESCRIPTION>
+          <LHS>;machine.extragroteafwerkingseenheid.montage@value;</LHS>
+          <RULES LABEL="Extra grote ExtraGroteAfwerkingseenheid" DESCRIPTION="Extra grote ExtraGroteAfwerkingseenheid">
+            <RULE LABEL="Perforatiemodule">
+              <CONDITION>true</CONDITION>
+              <IMPLICATION>Machine.ExtraGroteAfwerkingseenheid.PerforatieModule.Montage = 
+if Machine.ExtraGroteAfwerkingseenheid.PerforatieModule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.ExtraGroteAfwerkingseenheid.PerforatieModule) else 0 end if</IMPLICATION>
+              <DESCRIPTION>Perforatiemodule</DESCRIPTION>
+              <LHS>;machine.extragroteafwerkingseenheid.perforatiemodule.montage@value;</LHS>
+            </RULE>
+          </RULES>
+        </RULE>
+        <RULE LABEL="Papierdoorvoereenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Papierdoorvoereenheid.Montage = 
+if Machine.Papierdoorvoereenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Papierdoorvoereenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Papierdoorvoereenheid</DESCRIPTION>
+          <LHS>;machine.papierdoorvoereenheid.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Uitvoerladeenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Uitvoerladeenheid.Montage = 
+if Machine.Uitvoerladeenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Uitvoerladeenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Uitvoerladeenheid</DESCRIPTION>
+          <LHS>;machine.uitvoerladeenheid.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Voet_Kast">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Voet_Kast.Montage = 
+if Machine.Voet_Kast &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Voet_Kast) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Voet_Kast</DESCRIPTION>
+          <LHS>;machine.voet_kast.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Toetsenbord">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Toetsenbord.Montage = 
+if Machine.Toetsenbord &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Toetsenbord) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Toetsenbord</DESCRIPTION>
+          <LHS>;machine.toetsenbord.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Extrageheugen">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Extrageheugen.Montage = 
+if Machine.Extrageheugen &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Extrageheugen) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Extrageheugen</DESCRIPTION>
+          <LHS>;machine.extrageheugen.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="PS3Uitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.PS3Uitbreidingskit.Montage = 
+if Machine.PS3Uitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.PS3Uitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>PS3Uitbreidingskit</DESCRIPTION>
+          <LHS>;machine.ps3uitbreidingskit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="XPSUitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.XPSUitbreidingskit.Montage = 
+if Machine.XPSUitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.XPSUitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>XPSUitbreidingskit</DESCRIPTION>
+          <LHS>;machine.xpsuitbreidingskit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="XPSUitbreidingskit3">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.XPSUitbreidingskit.Montage = 
+if Machine.XPSUitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.XPSUitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>XPSUitbreidingskit3</DESCRIPTION>
+          <LHS>;machine.xpsuitbreidingskit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Faxuitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Faxuitbreidingskit.Montage = 
+if Machine.Faxuitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Faxuitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Faxuitbreidingskit</DESCRIPTION>
+          <LHS>;machine.faxuitbreidingskit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Internetfaxuitbreidingskit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Internetfaxuitbreidingskit.Montage = 
+if Machine.Internetfaxuitbreidingskit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Internetfaxuitbreidingskit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Internetfaxuitbreidingskit</DESCRIPTION>
+          <LHS>;machine.internetfaxuitbreidingskit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Stempeleenheid">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Stempeleenheid.Montage = 
+if Machine.Stempeleenheid &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Stempeleenheid) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Stempeleenheid</DESCRIPTION>
+          <LHS>;machine.stempeleenheid.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="EnhancedCompressionKit7">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.EnhancedCompressionKit.Montage = 
+if Machine.EnhancedCompressionKit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.EnhancedCompressionKit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>EnhancedCompressionKit</DESCRIPTION>
+          <LHS>;machine.enhancedcompressionkit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Licenties">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Licenties.Montage = 
+if Machine.Licenties &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Licenties) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Licenties</DESCRIPTION>
+          <LHS>;machine.licenties.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="DataSecurityKit">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.DataSecurityKit.Montage = 
+if Machine.DataSecurityKit &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.DataSecurityKit) else 0 end if</IMPLICATION>
+          <DESCRIPTION>DataSecurityKit</DESCRIPTION>
+          <LHS>;machine.datasecuritykit.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Applicatieintegratiemodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Applicatieintegratiemodule.Montage = 
+if Machine.Applicatieintegratiemodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Applicatieintegratiemodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Applicatieintegratiemodule</DESCRIPTION>
+          <LHS>;machine.applicatieintegratiemodule.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Applicatiecommunicatiemodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Applicatiecommunicatiemodule.Montage = 
+if Machine.Applicatiecommunicatiemodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Applicatiecommunicatiemodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Applicatiecommunicatiemodule</DESCRIPTION>
+          <LHS>;machine.applicatiecommunicatiemodule.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Externeaccountmodule">
+          <CONDITION>true</CONDITION>
+          <IMPLICATION>Machine.Externeaccountmodule.Montage = 
+if Machine.Externeaccountmodule &lt;&gt; "" then GetDoubleValue(ConnectionXML; "MX5000"; "Montage"; "Nr"; "="; Machine.Externeaccountmodule) else 0 end if</IMPLICATION>
+          <DESCRIPTION>Externeaccountmodule</DESCRIPTION>
+          <LHS>;machine.externeaccountmodule.montage@value;</LHS>
+        </RULE>
+        <RULE LABEL="Tarief mag niet lager zijn dan normtarief">
+          <CONDITION>Diensten.LeaseTarief.Tarief &lt; Diensten.LeaseTarief.NormTarief and Diensten.LeaseTarief.Tarief &gt; 0</CONDITION>
+          <IMPLICATION>MsgBox("Lease tarief mag niet lager zijn als normtarief!") &lt;&gt; 1</IMPLICATION>
+          <DESCRIPTION>Tarief mag niet lager zijn dan normtarief</DESCRIPTION>
+        </RULE>
+      </RULES>
+      <RULES LABEL="Service Contract" DESCRIPTION="">
+        <RULE LABEL="Bereken tarief service contract 1">
+          <CONDITION>Diensten.Service.AantalKopieeen &lt; 10000</CONDITION>
+          <IMPLICATION>Diensten.Service.ServiceBedrag =
+switch Diensten.Service.ServiceContract
+case "8uur" : Round(0,01 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+case "4uur" : Round(0,02 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+else 0
+end switch</IMPLICATION>
+          <DESCRIPTION>Bereken tarief service contract 1</DESCRIPTION>
+          <LHS>;diensten.service.servicebedrag@value;</LHS>
+        </RULE>
+        <RULE LABEL="Bereken tarief service contract 2">
+          <CONDITION>Diensten.Service.AantalKopieeen &gt;= 10000 and Diensten.Service.AantalKopieeen &lt; 50000</CONDITION>
+          <IMPLICATION>Diensten.Service.ServiceBedrag =
+switch Diensten.Service.ServiceContract
+case "8uur" : Round(0,015 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+case "4uur" : Round(0,025 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+else 0
+end switch</IMPLICATION>
+          <DESCRIPTION>Bereken tarief service contract 2</DESCRIPTION>
+          <LHS>;diensten.service.servicebedrag@value;</LHS>
+        </RULE>
+        <RULE LABEL="Bereken tarief service contract 3">
+          <CONDITION>Diensten.Service.AantalKopieeen &gt;= 50000 and Diensten.Service.AantalKopieeen &lt; 100000</CONDITION>
+          <IMPLICATION>Diensten.Service.ServiceBedrag =
+switch Diensten.Service.ServiceContract
+case "8uur" : Round(0,03 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+case "4uur" : Round(0,035 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+else 0
+end switch</IMPLICATION>
+          <DESCRIPTION>Bereken tarief service contract 3</DESCRIPTION>
+          <LHS>;diensten.service.servicebedrag@value;</LHS>
+        </RULE>
+        <RULE LABEL="Bereken tarief service contract 4">
+          <CONDITION>Diensten.Service.AantalKopieeen &gt;= 100000</CONDITION>
+          <IMPLICATION>Diensten.Service.ServiceBedrag =
+switch Diensten.Service.ServiceContract
+case "8uur" : Round(0,05 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+case "4uur" : Round(0,08 * Diensten.Prijzen.VerkoopprijsBruto;1;"&gt;")
+else 0
+end switch</IMPLICATION>
+          <DESCRIPTION>Bereken tarief service contract 4</DESCRIPTION>
+          <LHS>;diensten.service.servicebedrag@value;</LHS>
+        </RULE>
+      </RULES>
+      <RULE LABEL="Berekenen totalen">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Diensten.Prijzen.VerkoopprijsBruto = Total("Machine.Prijs");
+Diensten.Prijzen.Kostprijs = Total("Machine.Kostprijs") + 0,5 * Diensten.Prijzen.Montage;
+Diensten.Prijzen.Montage = 
+if Diensten.Installatie 
+then Total("Machine.Montage") 
+ + if Diensten.NetwerkInstallatie then 2 else 0 end if
+else 0 end if;
+Diensten.Prijzen.Montage2 = Diensten.Prijzen.Montage * 45;
+Diensten.Prijzen.VerkoopprijsNetto = Diensten.Prijzen.VerkoopprijsBruto * ((1-Diensten.Prijzen.Korting));
+Diensten.Prijzen.Marge = 1-(Diensten.Prijzen.Kostprijs / Diensten.Prijzen.VerkoopprijsNetto)</IMPLICATION>
+        <DESCRIPTION>Berekenen totalen</DESCRIPTION>
+        <LHS>;diensten.prijzen.verkoopprijsbruto@value;diensten.prijzen.kostprijs@value;diensten.prijzen.montage@value;diensten.prijzen.montage2@value;diensten.prijzen.verkoopprijsnetto@value;diensten.prijzen.marge@value;</LHS>
+      </RULE>
+      <RULE LABEL="Norm tarief Lease">
+        <CONDITION>Diensten.Looptijd &gt; 0</CONDITION>
+        <IMPLICATION>Diensten.LeaseTarief.NormTarief = 
+Round(
+(Diensten.Prijzen.VerkoopprijsNetto * (Pow((100 + Diensten.Rente)/100;2))) / Diensten.Looptijd
+)</IMPLICATION>
+        <DESCRIPTION>Norm tarief Lease</DESCRIPTION>
+        <LHS>;diensten.leasetarief.normtarief@value;</LHS>
+      </RULE>
+      <RULE LABEL="Default tarief">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Diensten.LeaseTarief.Tarief@default = Diensten.LeaseTarief.NormTarief</IMPLICATION>
+        <DESCRIPTION>Default tarief</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="Provisie">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Diensten.LeaseTarief.Provisie = 
+Round(
+(0,01 * Diensten.LeaseTarief.NormTarief + 0,15 * (Diensten.LeaseTarief.Tarief - Diensten.LeaseTarief.NormTarief)) * Diensten.Looptijd
+)</IMPLICATION>
+        <DESCRIPTION>Provisie</DESCRIPTION>
+      </RULE>
+      <RULE LABEL="Query Copiers">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>Machine.BasisMachine@options = GetOptions("Machine.BasisMachine"; true; ConnectionXML; "COPIERS")</IMPLICATION>
+        <DESCRIPTION>Query Copiers</DESCRIPTION>
+        <LHS>;machine.basismachine@options;</LHS>
+      </RULE>
+    </RULES>
+    <RULES LABEL="CRM" DESCRIPTION="">
+      <RULE LABEL="Set Quote Id and other details">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>quantity = Machine.Aantal;
+
+UNITPRICE = Diensten.Prijzen.VerkoopprijsBruto;
+//manualdiscountamount = Diensten.Prijzen.VerkoopprijsBruto - Diensten.Prijzen.VerkoopprijsNetto;</IMPLICATION>
+        <DESCRIPTION>Set Quote Id and other details</DESCRIPTION>
+        <LHS>;quantity@value;unitprice@value;</LHS>
+      </RULE>
+      <RULE LABEL="Determine Product Id">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>productid = 
+switch Machine.BasisMachine
+case "MX-5000N" : "9cadb15a-313b-e711-80e0-1458d0431600"
+case "MX-5001N" : "08291471-313b-e711-80e0-1458d0431600"
+case "MX-5112N" : "ce011784-313b-e711-80e0-1458d0431600"
+case "MX-6201N" : "37f7979f-313b-e711-80e0-1458d0431600"
+case "MX-6240N" : "d655acb3-313b-e711-80e0-1458d0431600"
+case "MX-7040N" : "9a5b1e96-3a3b-e711-80e0-1458d0431600"
+else ""
+end switch
+</IMPLICATION>
+        <DESCRIPTION>Determine Product Id</DESCRIPTION>
+        <LHS>;productid@value;</LHS>
+      </RULE>
+    </RULES>
+    <RULES LABEL="Import Items" DESCRIPTION="">
+      <RULE LABEL="Query items">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>index n of ThirdPartyComponents.Import;
+
+if ThirdPartyComponents.Import(n).StartImport
+then 
+local string connectionfile = GetSetting("Data.XML.ConnectionString") + ThirdPartyComponents.Import(n).FileName + ".xml";
+ThirdPartyComponents.Import(n).Items@options = GetOptions("ThirdPartyComponents.Import[" &amp; n &amp; "].Items"; true; Connectionfile; "ITEMS");
+ThirdPartyComponents.Import(n).StartImport = false;
+end if;</IMPLICATION>
+        <DESCRIPTION>Query items</DESCRIPTION>
+        <LHS>;thirdpartycomponents.import[1].items@options;thirdpartycomponents.import[1].startimport@value;</LHS>
+      </RULE>
+      <RULE LABEL="Fill list">
+        <CONDITION>true</CONDITION>
+        <IMPLICATION>
+index n of ThirdPartyComponents.Import;
+
+ThirdPartyComponents.Import(n).Item@length = Len(ThirdPartyComponents.Import(n).Items@options);
+
+Index i of ThirdPartyComponents.Import.Item;
+ThirdPartyComponents.Import(n).Item(i)@repeat = false;
+ThirdPartyComponents.Import(n).Item(i).ItemId = ThirdPartyComponents.Import(n).Items@option(i)@id;
+ThirdPartyComponents.Import(n).Item(i).Name = ThirdPartyComponents.Import(n).Items@option(i)@label;
+local string connectionfile = GetSetting("Data.XML.ConnectionString") + ThirdPartyComponents.Import(n).FileName + ".xml";
+ThirdPartyComponents.Import(n).Item(i).Price = GetDoubleValue(connectionfile; "ITEMS"; "SalesPrice"; "ItemId"; "="; ThirdPartyComponents.Import(n).Item(i).ItemId) 
+end index;</IMPLICATION>
+        <DESCRIPTION>Fill list</DESCRIPTION>
+        <LHS>;</LHS>
+      </RULE>
+    </RULES>
+    <RULES LABEL="NAV" DESCRIPTION="">
+      <RULE LABEL="Set bom">
+        <CONDITION>false //true</CONDITION>
+        <IMPLICATION>ProductionBOMNo.ProductionBOMLine@length = 20;
+
+if Machine.Afwerkingseenheid.Perforatiemodule &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[1] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[1].No = Machine.Afwerkingseenheid.Perforatiemodule 
+else
+	ProductionBOMNo.ProductionBOMLine[1] = ""
+end if;
+
+if Machine.Finisher &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[2] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[2].No = Machine.Finisher;
+else
+	ProductionBOMNo.ProductionBOMLine[2] = ""
+end if;
+
+if Machine.ExtraGroteAfwerkingseenheid &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[3] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[3].No = Machine.ExtraGroteAfwerkingseenheid;
+else
+	ProductionBOMNo.ProductionBOMLine[3] = ""
+end if;
+
+if Machine.Papierdoorvoereenheid &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[4] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[4].No = Machine.Papierdoorvoereenheid;
+else
+	ProductionBOMNo.ProductionBOMLine[4] = ""
+end if;
+
+if Machine.Uitvoerladeenheid  &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[5] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[5].No = Machine.Uitvoerladeenheid;
+else
+	ProductionBOMNo.ProductionBOMLine[5] = ""
+end if;
+
+if Machine.Voet_Kast &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[6] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[6].No = Machine.Voet_Kast;
+else
+	ProductionBOMNo.ProductionBOMLine[6] = ""
+end if;
+
+if Machine.Toetsenbord &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[7] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[7].No = Machine.Toetsenbord;
+else
+	ProductionBOMNo.ProductionBOMLine[7] = ""
+end if;
+
+if Machine.ExtraGeheugen &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[8] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[8].No = Machine.ExtraGeheugen;
+else
+	ProductionBOMNo.ProductionBOMLine[8] = ""
+end if;
+
+if Machine.PS3Uitbreidingskit &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[9] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[9].No = Machine.PS3Uitbreidingskit;
+else
+	ProductionBOMNo.ProductionBOMLine[9] = ""
+end if;
+
+if Machine.XPSUitbreidingskit &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[10] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[10].No = Machine.XPSUitbreidingskit;
+else
+	ProductionBOMNo.ProductionBOMLine[10] = ""
+end if;
+
+if Machine.XPSUitbreidingskit2 &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[11] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[11].No = Machine.XPSUitbreidingskit2;
+else
+	ProductionBOMNo.ProductionBOMLine[11] = ""
+end if;
+
+if Machine.Faxuitbreidingskit &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[12] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[12].No = Machine.Faxuitbreidingskit;
+else
+	ProductionBOMNo.ProductionBOMLine[12] = ""
+end if;
+
+if Machine.Internetfaxuitbreidingskit &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[13] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[13].No = Machine.Internetfaxuitbreidingskit;
+else
+	ProductionBOMNo.ProductionBOMLine[13] = ""
+end if;
+
+if Machine.Stempeleenheid &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[14] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[14].No = Machine.Stempeleenheid;
+else
+	ProductionBOMNo.ProductionBOMLine[14] = ""
+end if;
+
+if Machine.EnhancedCompressionKit &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[15] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[15].No = Machine.EnhancedCompressionKit;
+else
+	ProductionBOMNo.ProductionBOMLine[15] = ""
+end if;
+
+if Machine.Licenties &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[16] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[16].No = Machine.Licenties;
+else
+	ProductionBOMNo.ProductionBOMLine[16] = ""
+end if;
+
+if Machine.DataSecurityKit &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[17] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[17].No = Machine.DataSecurityKit;
+else
+	ProductionBOMNo.ProductionBOMLine[17] = ""
+end if;
+
+if Machine.Applicatieintegratiemodule &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[18] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[18].No = Machine.Applicatieintegratiemodule;
+else
+	ProductionBOMNo.ProductionBOMLine[18] = ""
+end if;
+
+if Machine.Applicatiecommunicatiemodule &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[19] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[19].No = Machine.Applicatiecommunicatiemodule;
+else
+	ProductionBOMNo.ProductionBOMLine[19] = ""
+end if;
+
+if Machine.Externeaccountmodule &lt;&gt; "" then
+	ProductionBOMNo.ProductionBOMLine[20] = "99000772";
+	ProductionBOMNo.ProductionBOMLine[20].No = Machine.Externeaccountmodule;
+else
+	ProductionBOMNo.ProductionBOMLine[20] = ""
+end if;
+
+
+
+</IMPLICATION>
+        <DESCRIPTION>Set bom</DESCRIPTION>
+        <LHS>;productionbomno.productionbomline[1]@value;productionbomno.productionbomline[1].no@value;productionbomno.productionbomline[2]@value;productionbomno.productionbomline[2].no@value;productionbomno.productionbomline[3]@value;productionbomno.productionbomline[3].no@value;productionbomno.productionbomline[4]@value;productionbomno.productionbomline[4].no@value;productionbomno.productionbomline[5]@value;productionbomno.productionbomline[5].no@value;productionbomno.productionbomline[6]@value;productionbomno.productionbomline[6].no@value;productionbomno.productionbomline[7]@value;productionbomno.productionbomline[7].no@value;productionbomno.productionbomline[8]@value;productionbomno.productionbomline[8].no@value;productionbomno.productionbomline[9]@value;productionbomno.productionbomline[9].no@value;productionbomno.productionbomline[10]@value;productionbomno.productionbomline[10].no@value;productionbomno.productionbomline[11]@value;productionbomno.productionbomline[11].no@value;productionbomno.productionbomline[12]@value;productionbomno.productionbomline[12].no@value;productionbomno.productionbomline[13]@value;productionbomno.productionbomline[13].no@value;productionbomno.productionbomline[14]@value;productionbomno.productionbomline[14].no@value;productionbomno.productionbomline[15]@value;productionbomno.productionbomline[15].no@value;productionbomno.productionbomline[16]@value;productionbomno.productionbomline[16].no@value;productionbomno.productionbomline[17]@value;productionbomno.productionbomline[17].no@value;productionbomno.productionbomline[18]@value;productionbomno.productionbomline[18].no@value;productionbomno.productionbomline[19]@value;productionbomno.productionbomline[19].no@value;productionbomno.productionbomline[20]@value;productionbomno.productionbomline[20].no@value;</LHS>
+      </RULE>
+      <RULE LABEL="Description">
+        <CONDITION>false //true</CONDITION>
+        <IMPLICATION>Description = Machine.BasisMachine.Omschrijving</IMPLICATION>
+        <DESCRIPTION>Description</DESCRIPTION>
+        <LHS>;description@value;</LHS>
+      </RULE>
+      <RULE LABEL="Set item">
+        <CONDITION>False //No &lt;&gt; "" </CONDITION>
+        <IMPLICATION>local string strConnection = 
+	getSetting("data.navision.connectionstring") + ";cache=false";
+
+No = eCon.Data.Functions.GetFirstFreeNumber(strConnection ;"COPIER");</IMPLICATION>
+        <DESCRIPTION>Set item</DESCRIPTION>
+        <LHS>;no@value;</LHS>
+      </RULE>
+    </RULES>
+  </RULES>
+  <COLUMNS>
+    <COLUMN ID="Q" LABEL="Questions" FORMAT="###,##0.00" WIDTH="300" />
+    <COLUMN ID="A" LABEL="A" FORMAT="###,##0.00" WIDTH="400" />
+    <COLUMN ID="Prijs" LABEL="Sales price" FORMAT="C" WIDTH="100" STYLE="align:right" />
+    <COLUMN ID="Montage" LABEL="Installation" FORMAT="###,##0.00 hours" WIDTH="100" STYLE="align:right" />
+  </COLUMNS>
+  <LIBRARIES>
+    <LIBRARY ID="eCon.Data.Functions" LABEL="eCon.Data.Functions" />
+  </LIBRARIES>
+  <INTERFACES>
+    <INTERFACE INTERFACE="ICopier" VERSION="1.0.0" LABEL="ICopier" />
+  </INTERFACES>
+</CLASS>
