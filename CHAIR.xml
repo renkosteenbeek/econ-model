@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<CLASS ID="MY ITEM" LABEL="Item" TYPE="" VERSION="1.0.0" ISINTERFACE="false" XSLDATASOURCE="CHAIR" ENTITY="MY ITEM" ENTITYVERSION="1.0.0">
+<CLASS ID="MY ITEM" LABEL="Item" TYPE="" VERSION="1.0.0" ISINTERFACE="false" XSLDATASOURCE="RST/CHAIR" ENTITY="MY ITEM" ENTITYVERSION="1.0.0">
   <PROPERTIES>
     <PROPERTY ID="ProductName" LABEL="Product Name" TYPE="String" ININTERFACE="true">
     </PROPERTY>
     <PROPERTY ID="Price" LABEL="Price" TYPE="Double" ININTERFACE="true">
     </PROPERTY>
-    <PROPERTY ID="NO" LABEL="No." TYPE="String" VALUE="false" VISIBLE="false" FIELDID="" DOMAIN="ChairNumberSeries" KEYVALUE="Chair">
+    <PROPERTY ID="NO" LABEL="No" TYPE="String" VALUE="false" VISIBLE="false" FIELDID="" DOMAIN="ChairNumberSeries" KEYVALUE="Chair">
     </PROPERTY>
     <PROPERTY ID="DESCRIPTION" LABEL="Description" TYPE="String" LENGTH="50" FIELDID="">
     </PROPERTY>
@@ -16,6 +16,8 @@
     <PROPERTY ID="UNITCOST" LABEL="Unit Cost" TYPE="Double" FIELDID="">
     </PROPERTY>
     <PROPERTY ID="ProductName2" LABEL="Product Name" TYPE="String">
+    </PROPERTY>
+    <PROPERTY ID="Kleur" LABEL="Kleur" TYPE="String">
     </PROPERTY>
     <PROPERTY ID="FairTradeMaterials" LABEL="FairTradeMaterials" TYPE="Boolean" VALUE="false">
     </PROPERTY>
@@ -98,7 +100,7 @@
     <REFERENCE ID="BOMHeader" LABEL="BOM Header" TYPE="String" VALUE="MY BOM HEADER" CONSTANT="true" FIELDID="Production BOM No." TABLEID="99000771">
       <CLASS ID="MY BOM HEADER" LABEL="Production BOM Header" TYPE="" ENTITY="MY BOM HEADER" ENTITYVERSION="1.0.0" TABLEID="99000771">
         <PROPERTIES>
-          <PROPERTY ID="NO" LABEL="No." TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
+          <PROPERTY ID="NO" LABEL="No" TYPE="String" LENGTH="20" VISIBLE="false" FIELDID="1" STYLE="key:true;keyno:1">
           </PROPERTY>
           <PROPERTY ID="DESCRIPTION" LABEL="Description" TYPE="String" LENGTH="50" FIELDID="10">
           </PROPERTY>
@@ -122,7 +124,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -145,7 +147,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -168,7 +170,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -191,7 +193,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -214,7 +216,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -237,7 +239,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -260,7 +262,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -283,7 +285,7 @@
                     <OPTION ID="1" LABEL="Item" />
                   </OPTIONS>
                 </PROPERTY>
-                <PROPERTY ID="NO" LABEL="No." TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
+                <PROPERTY ID="NO" LABEL="No" TYPE="String" FIELDID="11" DOMAIN="eCon Chair Items">
                 </PROPERTY>
                 <PROPERTY ID="QUANTITYPER" LABEL="Quantity per" TYPE="Double" FIELDID="45">
                 </PROPERTY>
@@ -419,6 +421,14 @@ end if;</IMPLICATION>
 end if;</IMPLICATION>
       <DESCRIPTION>Rule2</DESCRIPTION>
       <LHS>;armrests@default;accessories.adjustablearmrests@default;</LHS>
+    </RULE>
+    <RULE LABEL="Kleur">
+      <CONDITION>true</CONDITION>
+      <IMPLICATION>if FairTradeMaterials then
+ Kleur = "Green";
+end if;</IMPLICATION>
+      <DESCRIPTION>Kleur</DESCRIPTION>
+      <LHS>;kleur@value;</LHS>
     </RULE>
   </RULES>
   <COLUMNS>
