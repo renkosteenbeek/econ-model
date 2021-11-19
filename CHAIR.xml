@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<CLASS ID="MY ITEM" LABEL="Item" TYPE="" VERSION="1.0.0" ISINTERFACE="false" XSLDATASOURCE="RST/CHAIR" ENTITY="MY ITEM" ENTITYVERSION="1.0.0">
+<CLASS ID="MY ITEM" LABEL="Item" TYPE="" VERSION="1.0.0" ISINTERFACE="false" XSLDATASOURCE="CHAIR" ENTITY="MY ITEM" ENTITYVERSION="1.0.0">
   <PROPERTIES>
     <PROPERTY ID="ProductName" LABEL="Product Name" TYPE="String" ININTERFACE="true">
     </PROPERTY>
@@ -17,7 +17,7 @@
     </PROPERTY>
     <PROPERTY ID="ProductName2" LABEL="Product Name" TYPE="String">
     </PROPERTY>
-    <PROPERTY ID="Kleur" LABEL="Kleur" TYPE="String">
+    <PROPERTY ID="Kleur" LABEL="Color" TYPE="String">
     </PROPERTY>
     <PROPERTY ID="FairTradeMaterials" LABEL="FairTradeMaterials" TYPE="Boolean" VALUE="false">
     </PROPERTY>
@@ -74,6 +74,8 @@
         <OPTION ID="Red" LABEL="Red" />
         <OPTION ID="Yellow" LABEL="Yellow" />
       </OPTIONS>
+    </PROPERTY>
+    <PROPERTY ID="ExtraKorting" LABEL="ExtraKorting" TYPE="Boolean" VALUE="false" ENABLED="false">
     </PROPERTY>
   </PROPERTIES>
   <REFERENCES>
@@ -399,9 +401,11 @@ ColorArmrests@option("Yellow")@visible = ColorBack in {""; "Blue"; "Yellow"};
     </RULE>
     <RULE LABEL="Define item name">
       <CONDITION>true</CONDITION>
-      <IMPLICATION>DESCRIPTION = "Chair " &amp; ChairModel;
-
-</IMPLICATION>
+      <IMPLICATION>if Chairmodel == "Standard" then
+  Description = "Beeteje een standaawrd matige stoel";
+else 
+  Description = " Deze is wel mooi maar wel een beetje duur";
+end if;</IMPLICATION>
       <DESCRIPTION>Define item name</DESCRIPTION>
       <LHS>;description@value;</LHS>
     </RULE>
